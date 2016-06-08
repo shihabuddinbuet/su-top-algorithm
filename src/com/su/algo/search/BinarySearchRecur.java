@@ -15,7 +15,7 @@ public class BinarySearchRecur {
 			arr.add(sc.nextInt());
 		}
 		int targetInput = sc.nextInt();
-		boolean found = binarySeach(arr, 0, numOfInput-1, (numOfInput -1)/2, targetInput);
+		boolean found = binarySearch(arr, 0, numOfInput-1, (numOfInput -1)/2, targetInput);
 		
 		if(found == true)
 			System.out.println("found");
@@ -23,18 +23,19 @@ public class BinarySearchRecur {
 			System.out.print("not found");
 	}
 	
-	private static boolean binarySeach(List<Integer> arr, int startIndex, 
+	private static boolean binarySearch(List<Integer> arr, int startIndex, 
 			int endIndex, int midIndex, int targetInput)
 	{
-		int minNum = arr.get(midIndex);
+		int midNum = arr.get(midIndex);
 		if(startIndex > endIndex)
 			return false;
-		else if(minNum == targetInput)
+		else if(midNum == targetInput)
 			return true;
-		else if (minNum < targetInput)
-			return binarySeach(arr, midIndex + 1, endIndex, (midIndex+1 + endIndex)/2, targetInput);
+		else if (midNum < targetInput)
+			 return binarySearch(arr, midIndex + 1, endIndex, (midIndex+1 + endIndex)/2, targetInput);
 		else
-			return binarySeach(arr, startIndex, midIndex-1,(startIndex + midIndex - 1)/2, targetInput);		
+			return binarySearch(arr, startIndex, midIndex-1,(startIndex + midIndex - 1)/2, targetInput);	
+		
 		
 	}
 
