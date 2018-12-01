@@ -16,7 +16,7 @@ application. Lets see how to run `BinarySearch` after cloning the project.
 5. Run `java BinarySearch`
 6. Give the requested input and the application will show output.
 
-## Authours
+## Authors
 * **Md shihab uddin** - *Initial work* - [shihabuddinbuet](https://github.com/shihabuddinbuet)
 
 See also the list of [contributors](https://github.com/shihabuddinbuet/su-top-algorithm/graphs/contributors) who participated in this project.
